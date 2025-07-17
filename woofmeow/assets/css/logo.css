@@ -1,0 +1,66 @@
+/* Logo Styles */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-decoration: none; /* Убираем подчеркивание */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+.logo a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Убираем изменение цвета при посещении */
+.logo:link, 
+.logo:visited, 
+.logo:hover, 
+.logo:active {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Плавное увеличение при наведении */
+.logo:hover {
+    transform: scale(1.03);
+    opacity: 0.9; /* Легкое затемнение при наведении */
+}
+
+/* Убираем outline при фокусе для аккуратного вида */
+.logo:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.3);
+}
+
+/* Иконка лапки */
+.logo::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234e73df"><path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+/* Анимация при наведении только для иконки */
+.logo:hover::before {
+    transform: rotate(10deg);
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .logo::before {
+        width: 32px;
+        height: 32px;
+    }
+}

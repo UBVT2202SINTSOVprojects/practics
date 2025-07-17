@@ -1,0 +1,151 @@
+.reservation-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.reservation-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reservation-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.reservation-header p {
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.reservation-form .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.reservation-form .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.35rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.reservation-form .form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.reservation-form .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.35rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.reservation-form .btn-block {
+    display: block;
+    width: 100%;
+}
+
+.reservation-form .btn:hover {
+    background-color: #3a5ec0;
+}
+
+/* Стили для календаря и выбора времени */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.time-slot {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-slot:hover {
+    border-color: var(--primary-color);
+}
+
+.time-slot.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.time-slot.unavailable {
+    background-color: #f8f9fa;
+    color: #adb5bd;
+    cursor: not-allowed;
+    border-color: #e9ecef;
+}
+
+/* Стили для уведомлений */
+.reservation-notice {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.reservation-notice.info {
+    background-color: #e7f5ff;
+    border-left: 4px solid #4dabf7;
+    color: #1864ab;
+}
+
+.reservation-notice.warning {
+    background-color: #fff3bf;
+    border-left: 4px solid #ffd43b;
+    color: #5f3f00;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .reservation-card {
+        padding: 1.5rem;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .reservation-card {
+        padding: 1rem;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,176 @@
+/* Catalog Page Specific Styles */
+.catalog-container {
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Animal Card Styles with Long Name Support */
+.animal-card {
+    position: relative;
+    overflow: visible; /* Allow content to overflow the card */
+}
+
+.animal-header h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    position: relative;
+    padding-right: 1.5rem; /* Space for status badge */
+}
+
+/* Status badge positioning */
+.animal-status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* Meta information adjustments */
+.animal-meta {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.animal-type, .animal-gender, .animal-age {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Add gender type styling to match animal-profile */
+.animal-gender.male {
+    background: rgba(180, 210, 255, 0.2);
+    color: #003d6e;
+    border: 1px solid #b4d2ff;
+}
+.animal-gender.male:before {
+    content: '♂ ';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 0.7rem;
+}
+
+.animal-gender.female {
+    background: rgba(255, 180, 235, 0.2);
+    color: #6e005a;
+    border: 1px solid #ffb4eb;
+}
+.animal-gender.female:before {
+    content: '♀ ';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 0.7rem;
+}
+
+/* Update age styling */
+.animal-age {
+    background: rgba(200, 230, 201, 0.3);
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+/* Breed and color text wrapping */
+.animal-details p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Description box with scroll for very long text */
+.animal-description {
+    max-height: 100px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Custom scrollbar for description */
+.animal-description::-webkit-scrollbar {
+    width: 4px;
+}
+
+.animal-description::-webkit-scrollbar-thumb {
+    background-color: rgba(78, 115, 223, 0.3);
+    border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animal-header h2 {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    
+    .animal-status {
+        position: static;
+        display: block;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Special case for admin view with status */
+.animal-card.admin-view .animal-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.animal-card.admin-view .animal-header h2 {
+    flex: 1;
+    min-width: calc(100% - 100px);
+}
+
+/* Long breed names handling */
+.animal-details p:nth-of-type(1) { /* Breed */
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Ensure buttons stay at bottom */
+.animal-actions {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Image container to maintain aspect ratio */
+.animal-image {
+    aspect-ratio: 4/3;
+    height: auto;
+}
+
+/* Filter form adjustments for long breed lists */
+.filter-group select#breed {
+    max-height: 200px;
+}
+
+/* Empty state message for no results */
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 3rem 1rem;
+}
+
+/* Special handling for very long words */
+.animal-card * {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+.animal-info h2 {
+    font-size: 1.5rem;
+    color: #4e73df;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}

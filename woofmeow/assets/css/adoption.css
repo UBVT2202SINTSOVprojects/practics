@@ -1,0 +1,186 @@
+/* adoption.css */
+.adoption-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.adoption-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.adoption-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.adoption-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.adoption-header p {
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.adoption-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.adoption-form .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.adoption-form .form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 0.35rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.adoption-form textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.adoption-form .form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.adoption-form .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.35rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.adoption-form .btn-block {
+    display: block;
+    width: 100%;
+}
+
+.adoption-form .btn:hover {
+    background-color: #3a5ec0;
+}
+
+/* Стили для выбора времени посещения */
+.visit-time-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.visit-time-option {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #f8f9fa;
+}
+
+.visit-time-option:hover {
+    border-color: var(--primary-color);
+}
+
+.visit-time-option.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Стили для уведомлений */
+.adoption-notice {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.adoption-notice.info {
+    background-color: #e7f5ff;
+    border-left: 4px solid #4dabf7;
+    color: #1864ab;
+}
+
+.adoption-notice.success {
+    background-color: #ebfbee;
+    border-left: 4px solid #40c057;
+    color: #2b8a3e;
+}
+
+.adoption-notice.warning {
+    background-color: #fff3bf;
+    border-left: 4px solid #ffd43b;
+    color: #5f3f00;
+}
+
+/* Стили для информационных блоков */
+.adoption-info-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.adoption-info-box h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.adoption-info-box ul {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.adoption-info-box li {
+    margin-bottom: 0.5rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .adoption-card {
+        padding: 1.5rem;
+    }
+    
+    .visit-time-options {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .adoption-card {
+        padding: 1rem;
+    }
+    
+    .visit-time-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .adoption-info-box {
+        padding: 1rem;
+    }
+}

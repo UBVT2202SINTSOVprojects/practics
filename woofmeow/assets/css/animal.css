@@ -1,0 +1,344 @@
+.animal-profile {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.animal-main {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.animal-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Галерея и основная информация */
+.animal-gallery {
+    margin-bottom: 1.5rem;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info h1 {
+    font-size: 2rem;
+    color: #4e73df;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.animal-meta {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.animal-type, .animal-gender, .animal-age {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.animal-type:before, 
+.animal-gender:before, 
+.animal-age:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 0.7rem;
+}
+
+.animal-type.cat {
+    background: rgba(240, 180, 255, 0.2);
+    color: #5a006e;
+    border: 1px solid #f0b4ff;
+}
+.animal-type.cat:before {
+    content: '\f6be';
+}
+
+.animal-type.dog {
+    background: rgba(180, 224, 255, 0.2);
+    color: #003d6e;
+    border: 1px solid #b4e0ff;
+}
+.animal-type.dog:before {
+    content: '\f6d3';
+}
+
+.animal-type.kitten {
+    background: rgba(255, 216, 180, 0.2);
+    color: #6e3c00;
+    border: 1px solid #ffd8b4;
+}
+.animal-type.kitten:before {
+    content: '\f6be';
+}
+
+.animal-type.puppy {
+    background: rgba(200, 255, 180, 0.2);
+    color: #1e6e00;
+    border: 1px solid #c8ffb4;
+}
+.animal-type.puppy:before {
+    content: '\f6d3';
+}
+
+.animal-gender.male {
+    background: rgba(180, 210, 255, 0.2);
+    color: #003d6e;
+    border: 1px solid #b4d2ff;
+}
+.animal-gender.male:before {
+    content: '\f222';
+}
+
+.animal-gender.female {
+    background: rgba(255, 180, 235, 0.2);
+    color: #6e005a;
+    border: 1px solid #ffb4eb;
+}
+.animal-gender.female:before {
+    content: '\f221';
+}
+
+.animal-age {
+    background: rgba(200, 230, 201, 0.3);
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+.animal-age:before {
+    content: '\f073';
+}
+
+/* Детали животного */
+.animal-details {
+    margin-bottom: 1.5rem;
+}
+
+.animal-details p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.animal-details strong {
+    color: #4a5568;
+}
+
+.animal-description h3 {
+    font-size: 1.3rem;
+    color: #4e73df;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.animal-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+/* Боковая панель */
+.sidebar-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-card h3 {
+    font-size: 1.2rem;
+    color: #4e73df;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.sidebar-card h3 i {
+    font-size: 1.1rem;
+}
+
+/* Кнопки действий */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #4e73df;
+    color: white;
+    box-shadow: 0 4px 12px rgba(78, 115, 223, 0.3);
+}
+
+.btn-primary:hover {
+    background: #3a5ec0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(78, 115, 223, 0.4);
+}
+
+.btn-secondary {
+    background: #1cc88a;
+    color: white;
+    box-shadow: 0 4px 12px rgba(28, 200, 138, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #17a673;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(28, 200, 138, 0.4);
+}
+
+.not-available {
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-left: 3px solid #6c757d;
+}
+
+.auth-notice {
+    padding: 0.8rem;
+    background: #fff3cd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #856404;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-left: 3px solid #ffc107;
+}
+
+.auth-notice a {
+    color: #4e73df;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-notice a:hover {
+    text-decoration: underline;
+}
+
+/* Расписание */
+.schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.schedule-list .day {
+    font-weight: 500;
+}
+
+.schedule-list .time {
+    color: #666;
+}
+
+.current-status {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight: 600;
+}
+
+.status-open {
+    color: #28a745;
+}
+
+.status-closed {
+    color: #dc3545;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .animal-profile {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .animal-main, .sidebar-card {
+        padding: 1.2rem;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+    
+    .animal-meta {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .animal-profile {
+        padding: 0 0.5rem;
+        margin: 1rem auto;
+    }
+    
+    .main-image {
+        height: 250px;
+    }
+    
+    .animal-info h1 {
+        font-size: 1.6rem;
+    }
+}
